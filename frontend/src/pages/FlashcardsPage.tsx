@@ -18,7 +18,7 @@ import {
   ChevronRight
 } from 'lucide-react'
 import { flashcardsApi } from '../services/api'
-
+//main
 interface Flashcard {
   id: string
   topic_id: string
@@ -387,11 +387,10 @@ export default function FlashcardsPage() {
               <button
                 key={filter}
                 onClick={() => setGridFilter(filter)}
-                className={`text-xs px-3 py-1.5 rounded-xl capitalize font-semibold transition-all cursor-pointer ${
-                  gridFilter === filter
+                className={`text-xs px-3 py-1.5 rounded-xl capitalize font-semibold transition-all cursor-pointer ${gridFilter === filter
                     ? 'bg-indigo-600 text-white shadow-sm'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                  }`}
               >
                 {filter}
               </button>
@@ -407,11 +406,10 @@ export default function FlashcardsPage() {
                   setViewMode('single')
                   setIsFlipped(false)
                 }}
-                className={`p-4 rounded-2xl border transition-all text-left cursor-pointer flex flex-col justify-between space-y-3 ${
-                  card.mastered
+                className={`p-4 rounded-2xl border transition-all text-left cursor-pointer flex flex-col justify-between space-y-3 ${card.mastered
                     ? 'bg-emerald-50/40 border-emerald-200 hover:border-emerald-400'
                     : 'bg-slate-50/60 border-slate-200 hover:border-indigo-300'
-                }`}
+                  }`}
               >
                 <div>
                   <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-wider block mb-1">
@@ -426,11 +424,10 @@ export default function FlashcardsPage() {
                       e.stopPropagation()
                       handleReview(!card.mastered, card.id)
                     }}
-                    className={`p-1.5 rounded-xl border flex-shrink-0 cursor-pointer ml-2 ${
-                      card.mastered
+                    className={`p-1.5 rounded-xl border flex-shrink-0 cursor-pointer ml-2 ${card.mastered
                         ? 'bg-emerald-500 text-white border-emerald-500'
                         : 'bg-white text-slate-400 border-slate-200 hover:text-emerald-600'
-                    }`}
+                      }`}
                   >
                     <CheckCircle2 size={16} />
                   </button>
